@@ -1,19 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
         <link rel="stylesheet" href="../static/css/style.css">
-        <script src="../static/scripts/script.js"></script>
+        
     </head>
     <body>
         <header>
-            <h1>Assistência</h1>
+            <h1>Assistência Tecnica</h1>
         </header>
         <main>
+            <section class="linha">
+                <div>
+                    <h2>Orçamento</h2>
+                    <form id="orcament">
+                        <label for="peca">Valor de Peça:</label>
+                        <input type="number" id="peca"><br><br>
+                        <label for="frete">Valor do Frete:</label>              <br>
+                        <input type="number" id="frete">
+                        <input type="submit" value="Enviar">
+                        <br><br>
+                    </form>
+                    <ul>
+                        <li id="result">{{ orcamento }} R$</li>
+                    </ul>
+                </div>
+
+            </section>
+            <br>
+            <section>
+                <diV>
+                    <form id="cadastro">
+                        <label for="marca">Marca:</label>
+                        <input type="text" id="marca">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" id="modelo">
+                        <Label for="valor">Valor</Label>
+                        <input type="number" id="valor">
+                        <label for="quant">Qnt</label>
+                        <input type="number" id="quant">
+                        <input type="submit">
+                    </form>
+                    <table id="listcadastro">
+                        <tr>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th>Valor</th>
+                            <th>Quant</th>
+                        </tr>
+                    </table>
+                </diV>
+            </section>
 
         </main>
         <footer>
             <h4>Assistência</h4>
         </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="../static/scripts/script.js"></script>
     </body>
 </html>
